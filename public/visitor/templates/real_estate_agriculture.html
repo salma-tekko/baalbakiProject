@@ -1,0 +1,167 @@
+<script type="text/javascript">
+
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem( 'firstLoad' ) )
+    {
+      localStorage[ 'firstLoad' ] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem( 'firstLoad' );
+  }
+})();
+
+$('.industries_wrapper').height($(window).height());
+
+$('.construction_main').height($(window).height());
+
+$('.constrution_main_content').height($(window).height());
+
+if($(window).height()<700){
+	$('.industries_btns').css('bottom','auto');
+	$('.industries_btns').css('top','10px');
+}
+
+if($(window).height()<700){
+	$('.trade_btns').css('bottom','auto');
+	$('.trade_btns').css('top','10px');
+}
+
+if($(window).height()<700){
+	$('.real_estate_btns').css('bottom','auto');
+	$('.real_estate_btns').css('top','10px');
+}
+
+
+
+/********Real estate & agri*************/
+// setTimeout(function(){ 
+//             $('.real_estate_btns ul li.real_estate_btn').animate({'opacity':'1'},2000);
+//         }, 400);
+
+// setTimeout(function(){ 
+//             $('.real_estate_btns ul li.agri_btn').animate({'opacity':'1'},2000);
+//         }, 400);
+
+// setTimeout(function(){ 
+//             $('.real_estate_icons ul li.real_estate_icon').animate({'opacity':'1'},2000);
+//         }, 900);
+
+// setTimeout(function(){ 
+//             $('.real_estate_icons ul li.agri_icon').animate({'opacity':'1'},2000);
+//         }, 900);
+
+$('ul.btns_sec li a').hoverIntent(function() {
+        $(this).find('img:nth-child(1)').stop().animate({opacity: "0"}, 500);
+        $(this).find('img:nth-child(2)').stop().animate({opacity: "1"}, 500);
+    },
+    function(){
+        $(this).find('img:nth-child(1)').stop().animate({opacity: "1"}, 500);
+        $(this).find('img:nth-child(2)').stop().animate({opacity: "0"}, 500);
+});
+
+/*******Scroll real estate and agriculture****/
+$('.real_estate_btns ul li').click(function(e){ 
+ e.preventDefault();
+ var s = $(this).attr('id');
+ var myid = s.slice(0, s.lastIndexOf("_"));
+ 
+  var newtophere = $('#'+ myid +'').position().top+700;
+  $("html, body").animate({scrollTop:newtophere},1500);
+  
+});
+
+$('.real_estate_icons ul li').click(function(e){ 
+ e.preventDefault();
+ var s = $(this).attr('id');
+ var myid = s.slice(0, s.lastIndexOf("_"));
+ 
+  var newtophere = $('#'+ myid +'').position().top+700;
+  $("html, body").animate({scrollTop:newtophere},1500);
+  
+});
+</script>
+
+
+<section class="main_wrapper">
+	<section class="industries_wrapper">
+        <article class="real_estate_btns">
+            <ul class="clearfix btns_sec">
+                <li class="real_estate_btn" id="real_estate_btn">
+                    <a href="#">
+                    	<img src="images/real_estate_agri/real_estate_btn.png" />
+                        <img src="images/real_estate_agri/real_estate_btn_hover.png" />
+                    </a>
+                </li>
+                <li class="vertical_bar"></li>
+                <li class="agri_btn" id="agri_btn">
+                	<a href="#">
+                    	<img src="images/real_estate_agri/agriculture_btn.png" />
+                        <img src="images/real_estate_agri/agriculture_btn_hover.png" />
+                    </a>
+                </li>
+            </ul>
+        </article>
+        
+        <article class="real_estate_icons">
+            <ul class="clearfix">
+                <li class="real_estate_icon" id="real_estate_icon"><a href="#"></a></li>
+                <li class="agri_icon" id="agri_icon"><a href="#"></a></li>
+            </ul>
+        </article>
+    </section>
+    
+    <article class="contruction_sub_sec_wrapper trade_main_wrapper">
+    	<div class="white_overlay2">
+        	<div class="sub_sec_area">
+            	<bdo class="white_line"></bdo>
+                
+            	<section class="sub_area_content" id="real_estate">
+                	<div class="sec_shape">
+                    	<bdo class="shape1"></bdo>
+                        <bdo class="shape2"></bdo>
+                    </div>
+                    
+                    <aside>
+                    	<div class="text_on_top">
+                            <h1>Real Estate</h1>
+                            Prefabrication is not new. However, Baalbaki prefabricated houses 
+                            add a completely new concept as we combine old-style modular con-
+                            cepts with a customized approach, allowing our customers to 
+                            choose a basic design and adjust it according to their tastes and 
+                            needs.
+                            <br><br>
+                            Our prefabricated houses are built on a lightweight steel skeleton sur-
+                            rounded and covered by pre-painted galvanized steel PU insulated 
+                            sandwich panels; they can be easily assembled and dismantled and 
+                            are suitable for transportation. 
+                            <div><a href="Dummy file.docx" target="_blank" class="gray_link">Rethinking Architecture, Download file</a></div>
+                        </div>
+                        <img src="images/real_estate_agri/real_estate_img.png" class="real_estate_img">
+                    </aside>
+                </section>
+                
+                <section class="sub_area_content" id="agri">
+                	<div class="sec_shape">
+                    	<bdo class="shape1"></bdo>
+                        <bdo class="shape2"></bdo>
+                    </div>
+                    
+                    <aside>
+                    	<div class="text_on_top">
+                            <h1>Agriculture</h1>
+                            Prefabrication is not new. However, Baalbaki prefabricated houses 
+                            add a completely new concept as we combine old-style modular con-
+                            cepts with. 
+                            <div><a href="Dummy file.docx" target="_blank" class="gray_link">Rethinking Architecture, Download file</a></div>
+                        </div>
+                        <img src="images/real_estate_agri/agriculture_img.png" class="agriculture_img">
+                    </aside>
+                </section>
+            </div>
+        </div>
+    </article>
+</section>

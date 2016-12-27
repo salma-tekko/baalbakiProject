@@ -1,0 +1,52 @@
+<script type="text/javascript">
+//$('.cycle-slideshow').cycle();
+
+</script>
+
+<section class="main_wrapper" ng-init="getNews(1);" >
+	<article class="newsroom_img">
+    	<img src="images/newsroom_banner.jpg">
+        <aside>
+        	Lebanon's Leading Construction <br> Exhibition
+        </aside>
+    </article>
+
+	<article class="newsroom_wrapper">
+    	<div class="newsroom_content">
+        	<h1>Lebanon's Leading Construction Exhibition</h1>
+            21st international trade exhibition for construction material & equipment for Lebanon The ,2016 Project Lebanon.
+        </div>
+    
+        <div class="news_pics">
+        	<section class="clearfix">
+            	<aside>
+                <a href="#/eachNews/{{mainNew[0]}}">
+
+                <img src="coverPic/{{mainNew[0].news.coverPhoto}}" >
+                </a>
+        
+                	
+             
+                </aside>
+                
+                <ul class="clearfix">
+                	<li ng-repeat="new in set1" >
+
+                    <a href="#/eachNews/{{new}}">
+                    <img src="coverPic/{{new.news.coverPhoto}}" role="button" ng-click="selectNews(new);" >
+                    </a>
+                         
+                         </li>
+    
+                </ul>
+            </section>
+            
+            <ul class="more_pics clearfix">
+                <li ng-repeat="new in setRest" >
+               <a href="#/eachNews/{{new}}">
+                    <img src="coverPic/{{new.news.coverPhoto}}" role="button" ng-click="selectNews(new);" >
+                    </a>
+            </ul>
+        </div>
+    </article>
+</section>

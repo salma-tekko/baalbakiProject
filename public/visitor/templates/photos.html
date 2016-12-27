@@ -1,0 +1,54 @@
+<script type="text/javascript">
+
+ $(".fancybox-thumb").fancybox({
+         prevEffect  : 'none',
+         nextEffect  : 'none',
+         helpers : {
+             title   : {
+                 type: 'outside'
+             },
+             thumbs  : {
+                 width   : 50,
+                 height  : 50
+             }
+         }
+     });
+
+
+$( document ).on( "click", "img.grayscale", function() {
+    $(this).parent().find('.fancy1').click();
+});
+
+</script>
+
+<article class="gallery_wrapper" ng-init='getPhotos(2);' >
+    <section class="top_shadow"></section>
+    
+    <section class="light_shadow">
+    	<article></article>
+    </section>
+    
+    <section class="photos_wrapper">
+    	<ul class="clearfix">
+        	<li ng-repeat="photo in photos" ng-init="parentIndex = $index">
+
+            	<!-- <img src="coverPic/{{photo.news.coverPhoto}}" class="grayscale" ng-click="fancyGallary(photo.images);"> -->
+        <!-- 
+                <img ng-src="cmsImages/{{img.link}}" ng-repeat="img in photo.images" /> -->
+
+                <img src="coverPic/{{photo.news.coverPhoto}}" class="grayscale">
+                
+                <a fancybox class="fancybox-thumb fancy{{$index+1 }}" rel="fancybox-thumb{{$parent.$index }}" href="cmsImages/{{img.link}}" ng-repeat="img in photo.images">
+
+                </a>
+
+                <span>{{photo.news.title}}</span>
+            </li>
+            
+            
+        </ul>
+    </section>
+    
+    <section class="bottom_shadow"></section>
+
+</article>

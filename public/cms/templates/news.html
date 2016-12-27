@@ -1,0 +1,122 @@
+<div class="row"  ng-init="getNews();">
+    <div class="col-md-12">
+
+
+
+        <ul class="list-group" >
+
+            <li class="list-group-item" >
+                <label style="width: 100%" >
+                    <select class="form-control" ng-model="news.type" ng-change="getNews(news.type)">
+                        <option value="1">News</option>
+                        <option value="2">Album</option>
+                        <option value="3">Projects</option>
+                    </select>
+                </label>
+            </li>
+
+            <li class="list-group-item" >
+                <label style="width: 100%">
+                    Title
+                    <input type="text" class="form-control input-sm" placeholder="title" ng-model="news.title"  >
+                </label>
+            </li>
+            
+            <li class="list-group-item" ng-if="news.type==1 || news.type==3 " >
+                <label style="width: 100%" >
+                    Content
+                   <textarea  class="form-control" ng-model="news.content" >
+
+                   </textarea>
+                </label>
+            </li>
+
+            <li class="list-group-item">
+                <label style="width: 100%">
+                    Photos
+                    <input type="file" id="images" class="form-control" accept="image/*" multiple >
+               </label>
+            </li>
+
+            <li class="list-group-item">
+                <label style="width: 100%">
+                    Cover Photo
+                    <input type="file" id="coverPhoto" class="form-control" accept="image/*" ng-model="news.coverPhoto">
+               </label>
+            </li>
+
+            <li class="list-group-item" ng-if="news.type==3 " >
+                <label style="width: 100%" >
+                    Video Link
+                   <input type="text" class="form-control input-sm" placeholder="Link" ng-model="news.videoLink"  >
+                </label>
+            </li>
+
+            <li class="list-group-item" >
+                <label style="width: 100%">
+                    <button class="btn btn-default" style="width: 100%" ng-click="add(news);" >Add</button>
+                </label>
+            </li>
+
+        </ul>
+
+        <div style="height: 80px;"></div>
+        
+        <table class="table table-bordered" >
+            <thead>
+                <th></th>
+                <th>Title </th>
+                <th>Content</th>
+                <th>Photos</th>
+                <th>Cover Photos</th>
+                <th ng-if="news.type==3 ">Video Link </th>
+                <th ng-if="news.type==3 ">Update Video Link</th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="new in dataNews" >
+                    <td>
+                        {{$index+1}}
+                    </td>
+
+                    <td>
+               
+                        <input type="text" class="form-control" name="" ng-model="new.news.title">
+                
+                    </td>
+                    <td>
+                        <textarea class="form-control" ng-model="new.news.content"  style="resize: none;">
+
+                        </textarea>
+                    </td>
+
+                    <td>
+                        <a href="#/photos/{{new}}">Photos </a> 
+                    </td>
+
+                    <td>
+                       <a href="#/coverPic/{{new.news}}">Cover Photo </a> 
+                    </td>
+
+                    <td ng-if="news.type==3 ">
+                        <a href="https://www.youtube.com/embed/{{new.news.videoLink}}" target="_blank"  ng-if="new.news.videoLink">
+                            video link
+                        </a>
+                    </td>
+
+                    <td ng-if="news.type==3 ">
+                        <input type="text" class="form-control"  name="" ng-model="new.news.link">
+                    </td>
+
+                    <td>
+                        <button class="btn btn-default" ng-click="edit(new.news);">Save</button>
+
+                        <button class="btn btn-default" ng-click="delete(new.news);">delete</button>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</div>

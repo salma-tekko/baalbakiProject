@@ -1,0 +1,321 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+a {
+	text-decoration: none;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+}
+	a:hover,
+	a.selected {
+		color: #fff;
+	}
+
+/* h1,h2,h4,h5,h6 { */
+	/* text-align: center; */
+	/* color: #ccc; */
+	/* text-shadow: #000 1px 1px 2px; */
+	/* margin-bottom: 5px; */
+/* } */
+	h1 {
+		font-size: 18px;
+	}
+	h2 {
+		font-size: 14px;
+	}
+.sociales {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+	#timeline {
+		width: 734px;
+		height: 335px;
+		overflow: hidden;
+		margin: 0 auto 25px;
+		position: relative;
+		background:url(../images/timeline-bg.png) 0 0 no-repeat;
+	}
+		#dates {
+			width: 800px;
+			height: 66px;
+			overflow: hidden;
+		}
+			#dates li {
+				list-style: none;
+				float: left;
+				width: 100px;
+				height: 50px;
+				font-size: 24px;
+				text-align: center;
+				
+			}
+				#dates a {
+					display: inline-block;
+					height: 58px;
+					line-height: 38px;
+					padding-bottom: 10px;
+					font-family: 'co_headlineregular';
+					font-size:16px;
+					color:#fff;
+					background: url('../images/biggerdot.png') center 36px no-repeat;
+				}
+				#dates .selected {
+			        font-size: 30px;
+					background: url('../images/selected-dot.png') center 39px no-repeat;
+				}
+		
+		#issues {
+			width: 800px;
+			height: 250px;
+			overflow: hidden;
+			margin-top: 19px;
+			
+		}	
+			#issues li {
+				text-align:center;
+				color: #03729a;
+    font-family: "EurostileLTStd";
+    font-size: 18px;
+	padding-top:100px;
+				 float: left;
+				 margin-top: 2px;
+    height: 250px;
+    list-style: none outside none;
+    width: 738px;
+    position: relative;
+				background:url(../images/history-bg.png) no-repeat;
+			}
+			
+			#issues article{
+				padding:0 60px;
+			}
+				#issues li.selected img {
+					-webkit-transform: scale(1,1);
+					-moz-transform: scale(1,1);
+				    -o-transform: scale(1,1);
+				    -ms-transform: scale(1,1);
+				    transform: scale(1,1);
+				}
+				#issues li img {
+ 					position:absolute;
+					zoom: 1;
+					-webkit-transition: all 2s ease-in-out;
+					-moz-transition: all 2s ease-in-out;
+					-o-transition: all 2s ease-in-out;
+					-ms-transition: all 2s ease-in-out; 
+					transition: all 2s ease-in-out;
+					-webkit-transform: scale(0.7,0.7);
+					-moz-transform: scale(0.7,0.7);
+				    -o-transform: scale(0.7,0.7);
+				    -ms-transform: scale(0.7,0.7);
+				    transform: scale(0.7,0.7);
+				}
+				#issues li h1 {
+					color: #ffcc00;
+					font-size: 48px;
+					margin: 20px 0;
+					text-shadow: #000 1px 1px 2px;
+				}
+				#issues li p {
+					font-size: 14px;
+					font-weight: normal;
+					line-height: 29px;
+					color:#495961;
+				}
+		
+		
+		
+		#next,
+		#prev {
+			position: absolute;
+			top: 0;
+			font-size: 70px;
+			top: 185px;
+			width: 25px;
+			height: 38px;
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			text-indent: -9999px;
+			overflow: hidden;
+		}
+		/*
+			#next:hover,
+			#prev:hover {
+				background-position: 0 -76px;
+			}
+			*/
+			#next {
+				right: 25px;
+				background-image: url('../images/next.png');
+			}
+			#prev {
+				left: 25px;
+				background-image: url('../images/prev.png');
+			}
+				#next.disabled,
+				#prev.disabled {
+					opacity: 0.2;
+				}
+				
+				
+	.year1999  img.img1 {
+   left: -18px;
+    top: 56px;
+}
+
+.year1999  img.img2 {
+    right: 28px;
+    top: 37px;
+}
+
+
+.year1999  p {
+    position: absolute;
+	top:54px;
+	left:255px;
+}
+
+.year1999  p span, .year2000  p span{
+	font-size:26px;
+	
+}
+
+.year2000 p {
+    margin-top:53px;
+	margin-left:81px;
+}
+
+.year2000 figure{
+	background:url(../images/history/2000/pic-bg.png) no-repeat center bottom;
+	float: right;
+    height: 200px;
+    margin-right: 67px;
+    width: 383px;
+	margin-top:25px;
+}
+
+
+.year2000 figure img {
+    margin-left: 32px;
+	border-radius:10px;
+	
+}
+
+	.year2007  img.img1 {
+   left: 112px;
+    top: 30px;
+}
+
+.year2007  img.img2 {
+    right: 133px;
+    top: 30px;
+}
+
+
+.year2007  p {
+	text-align:center;
+	font-size:26px;
+	margin-top:50px;
+}
+
+.year2007  p span{
+	font-size:14px;
+	
+}
+
+	.year2008  img.img1 {
+   left: 40px;
+    top: 12px;
+}
+
+.year2008  img.img2 {
+    right: 28px;
+    top: 12px;
+}
+
+
+.year2008  p {
+	margin-top:54px;
+	margin-left: 210px;
+}
+
+.year2008  p span{
+	font-size:26px;
+	
+}
+
+
+	.year2010  img.img1 {
+		float: right;
+    margin-right: 101px;
+    margin-top: 9px;
+    position: relative !important;
+}
+
+
+.year2010  p {
+	margin-top:54px;
+	margin-left: 83px;
+}
+
+.year2010  p span{
+	font-size:26px;
+	
+}
+
+
+	.year2011  img.img1 {
+   right: 55px;
+    top: 25px;
+}
+
+
+.year2011  p {
+	margin-top:54px;
+	margin-left: 75px;
+}
+
+.year2011  p span{
+	font-size:26px;
+	
+}
+
+	.year2012  img.img1 {
+   right: 22px;
+    top: 20px;
+}
+
+
+.year2012  p {
+	margin-left: 70px;
+    margin-top: 33px;
+}
+
+.year2012 p span{
+	font-size:22px;
+	
+}
+
+	.year2014  img.img1 {
+   right: 5px;
+    top: 20px;
+}
+
+
+.year2014 p {
+	margin-left: 70px;
+    margin-top: 33px;
+}
+
+.year2014 p span{
+	font-size:22px;
+	
+}

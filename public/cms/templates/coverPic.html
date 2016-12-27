@@ -1,0 +1,30 @@
+
+
+<div class="row"  ng-init="getNews();">
+    <div class="col-md-12">
+
+
+    		<ul class="list-group" >
+
+    			<li class="list-group-item" >
+    				<img src="../visitor/coverPic/{{coverPhoto}}" style="width: 300px;">
+    			</li>
+
+    			<li class="list-group-item">
+	                <label style="width: 100%">
+	                   Change Cover Photo
+	                    <input type="file" id="coverPhoto" class="form-control" accept="image/*" ng-model="news.coverPhoto">
+	               </label>
+	            </li>
+
+				<li class="list-group-item" >
+    				<button class="btn btn-default" ng-click="delete(coverPic);">delete</button>
+    				<button class="btn btn-default" ng-click="update(coverPic);">update cover photo</button>
+    			</li>
+
+    		</ul>
+
+    </div>
+
+
+</div>

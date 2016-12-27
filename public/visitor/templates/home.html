@@ -1,0 +1,166 @@
+
+
+<script type="text/javascript">
+
+$('.engages_sec').height($(window).height());
+
+$('.industrie_sec').height($(window).height());
+
+$('.gallery_sec').height($(window).height());
+
+$('.newsroom_sec').height($(window).height());
+
+$('.project_sec').height($(window).height());
+
+if($('.gallery_wrapper').height()<$(window).height()){
+    $('.gallery_wrapper').height($(window).height());
+}
+
+$('.homeNewsSec').append($('.homeNews').html());
+//$('.cycle-slideshow').cycle();  
+
+// $('.cycle-slideshow')
+//     .data('cycle-fx', 'scrollHorz')
+//     .data('cycle-timeout', '2000')
+//     .data('cycle-slides', '> div')
+//     .data('cycle-pager' ,'.news_pager')
+//     .cycle();
+
+$(".regular").slick();
+
+
+</script>
+<section class="engages_sec" id="about_us">
+    <article>
+        <div class="engages_content">
+            <aside>
+                <h1 class="sec_main_title">Baalbaki engages</h1>
+                In industry, trade, investment, real estate, and <br>
+                agriculture operations Baalbaki engages in industry, <br>
+                trade, investment, real estate, and agriculture <br>
+                operations Baalbaki engages in industry, trade, <br>
+                investment, real estate, and agriculture operations.
+            </aside>
+            <img src="images/tortules/tortule1.png">
+        </div>
+    </article>
+</section>
+
+<section class="industrie_sec" id="served_industries">
+    <article class="industrie_bnts">
+        <ul class="clearfix">
+            <li class="industrie_btn"><a href="industries.html"></a></li>
+            <li class="trade_btn"><a href="trade.html"></a></li>
+            <li class="real_estate_btn"><a href="real_estate_agriculture.html"></a></li>
+        </ul>
+    </article>
+    <article class="industrie_icons">
+        <ul class="clearfix">
+            <li class="industrie"><a href="industries.html"></a></li>
+            <li class="trade"><a href="trade.html"></a></li>
+            <li class="real_estate"><a href="real_estate_agriculture.html"></a></li>
+        </ul>
+    </article>
+</section>
+
+<section class="newsroom_sec" id="newsroom" ng-init='getNews(1);' >
+        <article>
+
+<slick autoplay="true" autoplaySpeed="500" fade="true">
+    <div ng-repeat="image in images">
+      <img data-lazy="{{image}}">
+    </div>
+    </slick>
+        
+        </article>
+
+</section>
+
+<section class="project_sec" id="projects">
+    <article>
+        <div class="project_content">
+            <aside>
+                <h1 class="project_title"></h1>
+                Need to contact Baalbaki Check out our different <br>
+                contact channels and get in touch with us.
+            </aside>
+            <map id="ImgMap0" name="ImgMap0">
+            <area alt="" coords="420, 50, 699, 140" href="#/projects" shape="rect">
+            </map>
+            <img src="images/tortules/turtle2.png" usemap="#ImgMap0">
+        </div>
+    </article>
+</section>
+
+<section class="gallery_sec" id="gallery">
+    <a href="photos.html" class="galley_photos_btn"></a>
+    <a href="videos.html" class="gallery_videos_btn"></a>
+</section>
+
+<section class="contact_sec" id="contact">
+    <article class="map_sec">
+        <div class="cycle-slideshow" data-cycle-slides="> a" data-cycle-timeout="4000" data-cycle-fx="scrollVert" data-cycle-pause-on-hover="true" data-cycle-pager=".map_pager" data-cycle-speed="200">
+            <a href="https://maps.google.com/" target="_blank" data-cycle-pager-template="<a href=#>2. Marjeh<br></a>"><img src="images/maps/pic1.PNG"></a>
+            <a href="https://maps.google.com/" target="_blank" data-cycle-pager-template="<a href=#>3. Kafarsouseh<br></a>"><img src="images/maps/pic2.PNG"></a>
+            <a href="https://maps.google.com/" target="_blank" data-cycle-pager-template="<a href=#>4. Bab Mosalla<br></a>"><img src="images/maps/pic3.PNG"></a>
+            <a href="https://maps.google.com/" target="_blank" data-cycle-pager-template="<a href=#>5. Rokn Al Din<br></a>"><img src="images/maps/pic1.PNG"></a>
+            <a href="https://maps.google.com/" target="_blank" data-cycle-pager-template="<a href=#>6. Aleppo</a>"><img src="images/maps/pic2.PNG"></a>
+        </div>
+    </article>
+    
+    <article class="contact_info_wrapper">
+        <div class="contat_area">
+            <h1 class="sec_main_title3 paddingTop80">Need to contact Baalbaki ?</h1>
+            Check out our different contact channels and get in touch with us
+            
+            <div class="contact_form clearfix">
+                <aside>
+                    <div class="input_area">
+                        <input value="Name" onfocus="(this.value == 'Name') && (this.value = '')" onblur="(this.value == '') && (this.value = 'Name')" >
+                    </div>
+                    <div class="input_area">
+                        <input value="Email" onfocus="(this.value == 'Email') && (this.value = '')" onblur="(this.value == '') && (this.value = 'Email')" >
+                    </div>
+                    <div class="input_area">
+                        <input value="Company/Organization" onfocus="(this.value == 'Company/Organization') && (this.value = '')" onblur="(this.value == '') && (this.value = 'Company/Organization')" >
+                    </div>
+                </aside>
+                    
+                <aside>
+                    <div class="input_area contact_input_area">
+                        <textarea id="textarea" class="textarea">message</textarea>
+                    </div>
+                </aside>
+                
+                <aside>
+                    <a href="#" class="btn contact_btn">submit</a>
+                </aside>
+            </div>
+            
+            <div class="contact_info clearfix">
+                <aside>
+                    Damascus-Amman International South Highway<br>
+                    Alkeen District - P.O Box 5320 Damascus - Syria<br>
+                    Tel: 00963-11-6941472 / 6940801 / 6940808 / 9<br>
+                    Fax: 00963-11-6940727 / 6940806<br>
+                    Email: info@bift-llc.com Web: www.baalbaki.com
+                </aside>
+                
+                <aside>
+                    Baalbaki Damascus Free zone<br>
+                    Tel 00963-11-2145640 / 1<br>
+                    Fax 00963-11-2145640
+                </aside>
+                
+                <aside class="map_pager">
+                </aside>
+            </div>
+            
+            <map id="ImgMap1" name="ImgMap1">
+            <area alt="" coords="209, 8, 326, 55" href="career.html" shape="rect">
+            </map>
+            
+            <img src="images/tortules/contact_pic.png" usemap="#ImgMap1">
+        </div>
+    </article>
+</section>

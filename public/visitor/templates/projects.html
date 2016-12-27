@@ -1,0 +1,100 @@
+<script src="includes/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script type="text/javascript">
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem( 'firstLoad' ) )
+    {
+      localStorage[ 'firstLoad' ] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem( 'firstLoad' );
+  }
+})();
+
+
+$(document).ready(function(){
+
+	/****Projects Menu *******/
+	var projectMenuHeight = $('.img_wrapper img').height() - ($('.img_wrapper img').height()*4.9/100);
+	$('.projects_menu').height(projectMenuHeight);
+    $('.projects_menu').css('min-height',projectMenuHeight);
+
+	var liHeight = (projectMenuHeight / 8) - 1; 
+	$('.projects_menu li').height(liHeight);
+
+	liHeight = liHeight + "px"; 
+	$('.projects_menu li a').css('line-height',liHeight); 
+
+
+setTimeout(function(){ 
+            $('.projects_menu').animate({left:0},1500);
+        }, 500);
+})
+
+/****** Project FadeIn **********/
+// var x = $(window).height() - 543;
+// x = x / (285 + 20); 
+// x = Math.floor(x);
+
+// if(x<0)
+// $('.projects_list ul li').each(function(){
+// 	$(this).addClass('hideme');	
+// });
+
+// else if(x>=0) {
+// 	for(var i = 4; i <= $('.projects_list ul li').length ; i++) {
+// 		var liClass = '.projects_list ul li:nth-child('+i+')';	
+// 		$(liClass).addClass('hideme');
+// 	}
+// }
+
+$(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},2500);
+                    
+            }
+            
+        });
+
+
+    }); 
+</script>
+
+
+
+<section class="main_wrapper gray_bg" ng-init='getProjects(3);'>
+	<article class="img_wrapper projects_banner">
+    	<img src="images/projects.png">
+        <ul id="content_1" class="projects_menu">
+        	<li ng-repeat="project in projects"><a href="#/eachProject/{{project}}">{{project.news.title}}</a></li>
+        </ul>	
+    </article>
+
+	<article class="projects_list">
+    	<ul class="clearfix">
+        	<li  ng-repeat="project in projects" >
+            	<section>
+                    <a href="#/eachProject/{{project}}">
+                	   <img src="coverPic/{{project.news.coverPhoto}}">
+                    </a>
+                </section>
+                {{project.news.title}}
+            </li>
+            
+            
+        </ul>
+    </article>
+</section>

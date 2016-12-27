@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Baalbaki | Home</title>
+<link href="includes/site.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="./slick/slick.css">
+<link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+<script src="includes/jquery-1.9.1.js" type="text/javascript"></script>
+<script src="includes/jquery-migrate-1.1.1.js" type="text/javascript"></script>
+<script src="includes/easing.js" type="text/javascript"></script>
+<script src="includes/jquery.cycle2.js" type="text/javascript"></script>
+<script src="includes/jquery.hoverIntent.js" type="text/javascript"></script>
+
+
+<script src="includes/random.js" type="text/javascript"></script>
+
+<script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+ 
+
+</head>
+
+<body>
+
+<div class="loader"></div>
+<section class="main_menu_wrapper">
+	<article class="main_menu">
+        <span href="#" class="logo"></span>
+        
+        <ul class="clearfix home_menu">
+            <li><a href="#">Home </a></li>
+            <li><a href="#" id="about_us_btn">About us </a>
+            	<ul>
+                	<li><a href="#/about"> Baalbaki at a glance</a></li>
+                    <li><a href="#/about"> What we do</a></li>
+                    <li><a href="#/about"> Values and Mission</a></li>
+                    <li><a href="#/about"> Awards and Recognition</a></li>
+                     
+                </ul>
+            </li>
+            <li><a href="#" id="served_industries_btn">Served industries </a>
+            	<ul>
+                	<li><a  href="#/industries">Indusrty</a></li>
+                    <li><a href="#/trade">Trade</a></li>
+                    <li><a href="#/real_estate_agriculture">Real estate & Agriculture </a></li>
+                </ul>
+            </li>
+            <li><a href="#" id="newsroom_btn">News Room </a></li>
+            <li><a href="#" id="projects_btn">Projects </a></li>
+            <li><a href="#" id="gallery_btn">Gallery </a>
+            	<ul>
+                	<li><a href="#/photos">Photos</a>
+                    <li><a href="#/videos">Videos</a>
+                </ul>
+            </li>
+            <li><a href="#" id="contact_btn">Contact us</a>
+            	<ul>
+                	<li><a href="#">Contact Details</a></li>
+                    <li><a href="#">Contact Form</a></li>
+                    <li><a href="#/career">Careers</a></li>
+                </ul>
+            </li>
+        </ul>
+    </article>
+</section>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+// (function()
+// {
+//   if( window.localStorage )
+//   {
+//     if( !localStorage.getItem( 'firstLoad' ) )
+//     {
+//       localStorage[ 'firstLoad' ] = true;
+//       window.location.reload();
+//     }  
+//     else
+//       localStorage.removeItem( 'firstLoad' );
+//   }
+// })();
+
+$(window).load(function(){
+
+
+setTimeout(function(){ 
+      $(".loader").fadeOut("slow");
+    }, 500); 
+});
+
+$('.engages_sec').height($(window).height());
+
+$('.industrie_sec').height($(window).height());
+
+$('.gallery_sec').height($(window).height());
+
+$('.newsroom_sec').height($(window).height());
+
+$('.project_sec').height($(window).height());
+
+if($('.gallery_wrapper').height()<$(window).height()){
+    $('.gallery_wrapper').height($(window).height());
+}
+
+var galleryBtnWidth = $(window).width()*0.17;
+$('.galley_photos_btn').width(galleryBtnWidth);
+$('.gallery_videos_btn').width(galleryBtnWidth);
+galleryBtnWidth = galleryBtnWidth * 1/2 * (-1);
+$('.galley_photos_btn').css('marginLeft',galleryBtnWidth);
+$('.gallery_videos_btn').css('marginLeft',galleryBtnWidth);
+
+var galleryBtnHeight = $(window).height()*0.14;
+$('.galley_photos_btn').height(galleryBtnHeight);
+$('.gallery_videos_btn').height(galleryBtnHeight);
+galleryBtnHeight = $(window).height()* 0.42 * (-1);
+$('.galley_photos_btn').css('marginTop',galleryBtnHeight);
+galleryBtnHeight = $(window).height()* 0.25 * (-1);
+$('.gallery_videos_btn').css('marginTop',galleryBtnHeight);
+
+
+// $('.homeNewsSec').append($('.homeNews').html());
+ 
+//$('.cycle-slideshow').cycle(); 
+
+// $('.cycle-slideshow')
+//     .data('cycle-fx', 'scrollHorz')
+//     .data('cycle-timeout', '2000')
+//     .data('cycle-slides', '> div')
+//     .data('cycle-pager' ,'.news_pager')
+//     .cycle();
+
+//$(".regular").slick();
+
+
+
+</script>
+<section class="engages_sec" id="about_us">
+    <article>
+        <div class="engages_content">
+            <aside>
+                <h1 class="sec_main_title">Baalbaki engages</h1>
+                In industry, trade, investment, real estate, and <br>
+                agriculture operations Baalbaki engages in industry, <br>
+                trade, investment, real estate, and agriculture <br>
+                operations Baalbaki engages in industry, trade, <br>
+                investment, real estate, and agriculture operations... <a href="#/about" class="more_link">more</a>
+            </aside>
+            <img src="images/tortules/tortule1.png">
+        </div>
+    </article>
+</section>
+
+<section class="industrie_sec" id="served_industries">
+    <article class="industrie_bnts">
+        <ul class="clearfix btns_sec">
+            <li class="industrie_btn">
+            	<a href="#/industries">
+                	<img src="images/industrie/industrie_btn.png">
+                    <img src="images/industrie/industrie_btn_hover.png">
+                </a>
+            </li>
+            <li class="trade_btn">
+            	<a href="#/trade">
+                	<img src="images/industrie/trade_btn.png">
+                    <img src="images/industrie/trade_btn_hover.png">
+                </a>
+            </li>
+            <li class="real_estate_btn">
+            	<a href="#/real_estate_agriculture">
+            		<img src="images/industrie/real_estate_btn.png">
+                    <img src="images/industrie/real_estate_hover.png">    
+                </a>
+            </li>
+        </ul>
+    </article>
+    <article class="industrie_icons">
+        <ul class="clearfix">
+            <li class="industrie"><a href="#/industries"></a></li>
+            <li class="trade"><a href="#/trade"></a></li>
+            <li class="real_estate"><a href="#/real_estate_agriculture"></a></li>
+        </ul>
+    </article>
+</section>
+<!--ng-init='getNews(1);'-->
+<section class="newsroom_sec"  >
+        <article id="newsCarousel">
+
+            <!-- <div id="newsroom" class="cycle-slideshow" data-cycle-slides="> div" data-cycle-timeout="4000" data-cycle-fx="scrollVert" data-cycle-pause-on-hover="true" data-cycle-pager=".news_pager" data-cycle-speed="200"> -->
+
+            <div class="regular slider">
+
+                           
+            </div>
+        
+         <!-- <div class="news_pager"></div> -->
+
+        </article>
+
+</section>
+
+<section class="project_sec" id="projects">
+    <article>
+        <div class="project_content">
+            <aside>
+                <h1 class="project_title"></h1>
+                Need to contact Baalbaki Check out our different <br>
+                contact channels and get in touch with us.
+            </aside>
+            <map id="ImgMap0" name="ImgMap0">
+            <area alt="" coords="420, 50, 699, 140" href="#/projects" shape="rect">
+            </map>
+            <img src="images/tortules/turtle2.png" usemap="#ImgMap0">
+        </div>
+    </article>
+</section>
+
+<section class="gallery_sec" id="gallery">
+    <a href="photos.html" class="galley_photos_btn"></a>
+    <a href="videos.html" class="gallery_videos_btn"></a>
+    <img src="images/baners/photographer.png" class="gallery_photographer">
+</section>
+
+<section class="contact_sec" id="contact">
+    <article class="map_sec">
+        <div class="cycle-slideshow" data-cycle-slides="> a" data-cycle-timeout="4000" data-cycle-fx="scrollVert" data-cycle-pause-on-hover="true" data-cycle-pager=".map_pager" data-cycle-speed="200">
+            <a href="https://maps.google.com/maps/place/33.2267120,36.3010030" target="_blank" data-cycle-pager-template="<a href=#>1. Alqeen<br></a>"><img src="images/maps/pic1.PNG"></a>
+
+            <a href="https://maps.google.com/maps/place/33.5083730,36.2781300" target="_blank" data-cycle-pager-template="<a href=#>2. Free zone Offices<br></a>"><img src="images/maps/pic2.PNG"></a>
+
+            <a href="https://maps.google.com/maps/place/33.5127590,36.2974810" target="_blank" data-cycle-pager-template="<a href=#>3. al Marjeh Offices<br></a>"><img src="images/maps/pic3.PNG"></a>
+
+            <a href="https://maps.google.com/maps/place/33.4979410,36.3007420" target="_blank" data-cycle-pager-template="<a href=#>4. Bab Musalla<br></a>"><img src="images/maps/pic1.PNG"></a>
+
+            <a href="https://maps.google.com/maps/place/33.5387430,36.3042020" target="_blank" data-cycle-pager-template="<a href=#>5. Rukn al Din</a>"><img src="images/maps/pic2.PNG"></a>
+
+            <a href="https://maps.google.com/maps/place/33.4934510,36.2827080" target="_blank" data-cycle-pager-template="<a href=#>6. Kafar Sousa<br></a>"><img src="images/maps/pic1.PNG"></a>
+            
+            <a href="https://maps.google.com/maps/place/36.2153110,37.1630620" target="_blank" data-cycle-pager-template="<a href=#>7. Aleppo</a>"><img src="images/maps/pic2.PNG"></a>
+        </div>
+    </article>
+    
+    <article class="contact_info_wrapper hideme">
+        <div class="contat_area">
+            <h1 class="sec_main_title3 paddingTop80">Need to contact Baalbaki ?</h1>
+            Check out our different contact channels and get in touch with us
+            
+            <div class="contact_form clearfix">
+                <aside>
+                    <div class="input_area">
+                        <input value="Name" onfocus="(this.value == 'Name') && (this.value = '')" onblur="(this.value == '') && (this.value = 'Name')" >
+                    </div>
+                    <div class="input_area">
+                        <input value="Email" onfocus="(this.value == 'Email') && (this.value = '')" onblur="(this.value == '') && (this.value = 'Email')" >
+                    </div>
+                    <div class="input_area">
+                        <input value="Company/Organization" onfocus="(this.value == 'Company/Organization') && (this.value = '')" onblur="(this.value == '') && (this.value = 'Company/Organization')" >
+                    </div>
+                </aside>
+                    
+                <aside>
+                    <div class="input_area contact_input_area">
+                        <textarea id="textarea" class="textarea">message</textarea>
+                    </div>
+                </aside>
+                
+                <aside>
+                    <a href="#" class="btn contact_btn">submit</a>
+                </aside>
+            </div>
+            
+            <div class="contact_info clearfix">
+                <aside>
+                    <h1 class="contact_title">Baalbaki Industrial Premises:</h1>
+                    Damascus-Amman International South Highway<br>
+                    Alkeen District - P.O Box 5320 Damascus - Syria<br>
+                    Tel: 00963-11-6941472 / 6940801 / 6940808/9<br>
+                    Fax: 00963-11-6940727 / 6940806<br>
+                    Email: trahal@bift-llc.com Web: www.bfit-llc.com
+                </aside>
+                
+                <aside>
+                    <h1 class="contact_title">Baalbaki Offices:</h1>
+                    Baalbaki Damascus Free zone<br>
+                    Tel 00963-11-2145640 / 1<br>
+                    Fax 00963-11-2145640
+                </aside>
+                
+                <aside class="map_pager">
+                </aside>
+            </div>
+            
+            <map id="ImgMap1" name="ImgMap1">
+            <area alt="" coords="209, 8, 326, 55" href="#/career" shape="rect">
+            </map>
+            
+            <img src="images/tortules/contact_pic.png" usemap="#ImgMap1">
+        </div>
+    </article>
+</section>
+
+
+    
+
+
+
+
+</body>
+</html>

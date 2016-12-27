@@ -1,0 +1,199 @@
+<script type="text/javascript">
+$(window).load(function(){
+
+
+setTimeout(function(){ 
+      $(".loader").fadeOut("slow");
+    }, 500);
+});
+
+
+$('.glance').height($(window).height());
+
+$('.what_we_do').height($(window).height());
+
+$('.values').height($(window).height());
+
+// $('.milestone').css('min-height',$(window).height());
+
+$('.about_us_main_wrapper').height($(window).height());
+
+/*******Scroll about us****/
+// $('.about_us_tabs area').click(function(e){ 
+//     if(!$(this).hasClass('milestone_btn')){
+
+//          e.preventDefault();
+//          var s = $(this).attr('id');
+//          var myid = s.slice(0, s.lastIndexOf("_"));
+         
+//           var newtophere = $('#'+ myid +'').position().top+100;
+//           $("html, body").animate({scrollTop:newtophere},1500);
+//     }
+
+  
+// });
+
+$('.about_us_tabs area').click(function(e){ 
+    if(!$(this).hasClass('milestone_btn')){
+ e.preventDefault();
+ // var s = $(this).attr('id');
+ // var myid = s.slice(0, s.lastIndexOf("_"));
+ 
+ //  var newtophere = $('#'+ myid +'').position().top+100;
+ //  $("html, body").animate({scrollTop:newtophere},1500);
+  if($(this).hasClass('glance_btn')){
+    $('.about_us_content aside').animate({'right':'-115px', 'opacity':'0'},800);
+    $('.about_us_content .glance_content').animate({'right':'0', 'opacity':'1'},1000);
+    $('.glance_btn').fadeIn();
+    $('.values_btn').fadeOut();
+    $('img.what_we_do_btn').fadeOut();
+  }
+
+  else if($(this).hasClass('what_we_do_btn')){
+    $('.about_us_content aside').animate({'right':'-115px', 'opacity':'0'},800);
+    $('.about_us_content .what_we_do_content').animate({'right':'0', 'opacity':'1'},1000);
+    $('.glance_btn').fadeOut();
+    $('.values_btn').fadeOut();
+    $('img.what_we_do_btn').fadeIn();
+  }
+
+  else{
+    $('.about_us_content aside').animate({'right':'-115px', 'opacity':'0'},800);
+    $('.about_us_content .values_content').animate({'right':'0', 'opacity':'1'},1000);
+    $('.glance_btn').fadeOut();
+    $('.values_btn').fadeIn();
+    $('img.what_we_do_btn').fadeOut(); 
+  }
+
+}
+});
+
+</script>
+
+
+
+<section class="main_wrapper about_us">
+	<section class="glance" id="glance">
+        <article class="about_us_main_wrapper">
+        	<div class="about_us_content clearfix">
+            	<div class="about_us_tabs">
+                	<map id="ImgMap0" name="ImgMap0">
+                        <area alt="" coords="322, 69, 443, 131" href="#" shape="rect" class="glance_btn">
+                        <area alt="" coords="322, 133, 444, 193" href="#" shape="rect" class="what_we_do_btn">
+                        <area alt="" coords="321, 198, 444, 258" href="#" shape="rect" class="values_btn">
+                        <area alt="" coords="320, 261, 447, 334" href="#/milestone" shape="rect" id="milestone_btn" class="milestone_btn">
+					</map>
+                	<img src="images/aboutUs/main-tab.png" usemap="#ImgMap0">
+                	<img src="images/aboutUs/glance-btn.png" class="glance_btn">
+                    <img src="images/aboutUs/what-we_do_btn.png" class="what_we_do_btn" style="display: none;">
+                    <img src="images/aboutUs/values_btn.png" class="values_btn" style="display: none;">
+                </div>
+              <aside class="glance_content">
+                	<h1>Baalbaki at a glance</h1>
+                    Baalbaki, corporation that occupies a prominent place in the
+                    economic history of Syria. It carried on a profitable Trade
+                    during the 20th century. In 1957, Omar Baalbaki and his son
+                    Ihsan founded Barada Metallic Industries. Clearly, the Baalbaki
+                    holds a diversified business portfolio and may pride itself of
+                    its past and present achievements. For Baalbaki, the principle
+                    of continuity has been invariably kinship which is critical to the
+                    success of the company.
+                </aside>
+
+                <aside class="what_we_do_content"  style="opacity: 0; right: -115px;">
+                    <h1>What we do</h1>
+                    Baalbaki engages in construction, Polyurethanes chemical industry,
+                    trade, real estate investments and agriculture.<br><br>
+                    Baalbaki serves the construction industry by providing products
+                    with a focus on insulation. This includes PU insulated sandwich
+                    panels and prefabricated houses, insulated building blocks and
+                    decorative plaster, in addition to EPS hourdy blocks for ceilings.<br><br>
+                    Baalbaki mattress industry offers high quality PU mattresses
+                    adapted to the requirements of the International humanitarian organizations
+                    along with a full range of comfort mattresses for
+                    local and export market.
+                </aside>
+
+                <aside class="values_content"  style="opacity: 0; right: -115px;">
+                    <h1>Values & Mission</h1>
+                    Indeed, the values, and mission for the company’s continuous success
+                    are well summarized in the following words of Dr. Ihsan O.
+                    Baalbaki:<br><br>
+                    ‘During the past years we have survived and prospered despite experiencing
+                    nationalization in Syria; regime changes in markets
+                    where we were active; as well as the equally dangerous transition
+                    from generation to generation in our management and ownership.<br><br>
+                    Looking back, I can identify three fundamental core values that
+                    have been the instrumental building blocks supporting our success.
+                    These values will continue to guide our development strategies
+                    as we move into the next half of our first century:
+                </aside>
+            </div>
+        </article> 
+    </section>
+    
+    <!-- <section class="what_we_do" id="what_we_do">
+        <article class="about_us_main_wrapper">
+        	<div class="about_us_content clearfix">
+            	<div class="about_us_tabs">
+                	<map id="ImgMap0" name="ImgMap0">
+                        <area alt="" coords="322, 69, 443, 131" href="#" shape="rect" id="glance_btn">
+                        <area alt="" coords="322, 133, 444, 193" href="#" shape="rect" id="what_we_do_btn">
+                        <area alt="" coords="321, 198, 444, 258" href="#" shape="rect" id="values_btn">
+                        <area alt="" coords="320, 261, 447, 334" href="#/milestone" shape="rect" id="milestone_btn" class="milestone_btn">
+					</map>
+                	<img src="images/aboutUs/main-tab.png" usemap="#ImgMap0">
+                	<img src="images/aboutUs/glance-btn.png" class="glance_btn">
+                	<img src="images/aboutUs/what-we_do_btn.png" class="what_we_do_btn" style="display: none;">
+                </div>
+              <aside>
+                	<h1>What we do</h1>
+                    Baalbaki engages in construction, Polyurethanes chemical industry,
+                    trade, real estate investments and agriculture.<br><br>
+                    Baalbaki serves the construction industry by providing products
+                    with a focus on insulation. This includes PU insulated sandwich
+                    panels and prefabricated houses, insulated building blocks and
+                    decorative plaster, in addition to EPS hourdy blocks for ceilings.<br><br>
+                    Baalbaki mattress industry offers high quality PU mattresses
+                    adapted to the requirements of the International humanitarian organizations
+                    along with a full range of comfort mattresses for
+                    local and export market.
+                </aside>
+            </div>
+        </article> 
+    </section>
+    
+    <section class="values" id="values">
+        <article class="about_us_main_wrapper">
+        	<div class="about_us_content clearfix">
+            	<div class="about_us_tabs">
+                	<map id="ImgMap0" name="ImgMap0">
+                        <area alt="" coords="322, 69, 443, 131" href="#" shape="rect" id="glance_btn">
+                        <area alt="" coords="322, 133, 444, 193" href="#" shape="rect" id="what_we_do_btn">
+                        <area alt="" coords="321, 198, 444, 258" href="#" shape="rect" id="values_btn">
+                        <area alt="" coords="320, 261, 447, 334" href="#/milestone" shape="rect" id="milestone_btn" class="milestone_btn">
+					</map>
+                	<img src="images/aboutUs/main-tab.png" usemap="#ImgMap0">
+                	<img src="images/aboutUs/what-we_do_btn.png" class="what_we_do_btn">
+                	<img src="images/aboutUs/values_btn.png" class="values_btn" style="display: none;">
+                </div>
+              <aside>
+                	<h1>Values & Mission</h1>
+                    Indeed, the values, and mission for the company’s continuous success
+                    are well summarized in the following words of Dr. Ihsan O.
+                    Baalbaki:<br><br>
+                    ‘During the past years we have survived and prospered despite experiencing
+                    nationalization in Syria; regime changes in markets
+                    where we were active; as well as the equally dangerous transition
+                    from generation to generation in our management and ownership.<br><br>
+                    Looking back, I can identify three fundamental core values that
+                    have been the instrumental building blocks supporting our success.
+                    These values will continue to guide our development strategies
+                    as we move into the next half of our first century:
+                </aside>
+            </div>
+        </article> 
+    </section> -->
+    
+    
+</section>

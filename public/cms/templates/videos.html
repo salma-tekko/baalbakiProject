@@ -1,0 +1,76 @@
+<div class="row"  ng-init="getVideos();">
+    <div class="col-md-12">
+
+        <ul class="list-group" >
+
+
+            <li class="list-group-item" >
+                Title
+                <input type="text" class="form-control input-sm" ng-model="video.title" >
+            </li>
+
+
+            <li class="list-group-item" >
+                Link
+                <input type="text" class="form-control input-sm" ng-model="video.link" >
+            </li>
+
+
+            <li class="list-group-item" >
+                Content
+                <textarea class="form-control" ng-model="video.content" >
+
+                </textarea>
+            </li>
+
+            <li class="list-group-item" >
+                <button class="btn btn-default" style="width: 100%" data-ng-click="add(video);" >Add</button>
+            </li>
+
+        </ul>
+
+        <div style="height: 80px;"></div>
+        
+        <table class="table table-bordered" >
+            <thead>
+                <th></th>
+                <th>Title </th>
+                <th>Content</th>
+                <th>Link</th>
+                <th>Update Link</th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="video in videos" >
+                    <td>
+                        {{$index+1}}
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="" ng-model="video.title">
+                    </td>
+                    <td>
+                        <textarea class="form-control" ng-model="video.content" style="resize: none;">
+
+                        </textarea>
+                    </td>
+
+                    <td>
+                        <a href="https://www.youtube.com/embed/{{video.link}}" target="_blank">
+                            video link
+                        </a>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="" ng-model="video.link">
+                    </td>
+                    <td>
+                        <button class="btn btn-default" ng-click="edit(video);">Save</button>
+
+                        <button class="btn btn-default" ng-click="delete(video);">delete</button>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="row"  ng-init="getNews();">
+    <div class="col-md-12">
+
+<ul class="list-group" >
+	<li class="list-group-item" ng-repeat= 'image in images'>
+		<img src="../visitor/cmsImages/{{image.link}}" style="width: 200px;">
+		<button class="btn btn-default" ng-click="delete(image,$index);" style="margin-left: 40px">delete</button>
+	</li>
+
+	<li class="list-group-item">
+        <label style="width: 100%">
+            Add Photos
+            <input type="file" id="images" class="form-control" accept="image/*" multiple >
+       </label>
+    </li>
+
+    <li class="list-group-item" >
+        <label style="width: 100%">
+            <button class="btn btn-default" style="width: 100%" ng-click="add();" >Add</button>
+        </label>
+    </li>
+</ul>
+
+    
+</div>
+
+
+</div>

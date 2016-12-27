@@ -1,0 +1,26 @@
+<article class="gallery_wrapper" ng-init="getVideos();" >
+    <section class="top_shadow"></section>
+    
+    <section class="light_shadow">
+    	<article></article>
+    </section>
+    
+    <section class="videos_wrapper">
+    	<ul class="clearfix">
+        	<li ng-repeat="video in videos" >
+                <object width="100%" height="100%"
+                    data="https://www.youtube.com/embed/{{video.link}}">
+                </object>
+                  <a href="#/eachVideo?videoLink={{video.link}}&videoTitle={{video.title}}&videoContent={{video.content}}">
+                    <bdo></bdo>
+                    <bdi></bdi>
+                </a>
+            </li>
+            
+        
+        </ul>
+    </section>
+    
+    <section class="bottom_shadow"></section>
+
+</article>

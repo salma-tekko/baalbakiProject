@@ -1,0 +1,70 @@
+<script type="text/javascript">
+$('.career_wrapper').height($(window).height());
+</script>
+
+
+
+<section class="main_wrapper career_wrapper">
+	<article class="career_wrapper_overlay">
+    	<div class="career_content">
+        	<h1>POST YOUR CV</h1>
+            
+        	<article class="clearfix">
+            	<aside>
+                	<div class="career_input">
+                    	Title
+                        <input type="text">
+                    </div>
+                    
+                    <div class="career_input">
+                    	First Name
+                        <input type="text">
+                    </div>
+                    
+                    <div class="career_input">
+                    	Email Adress
+                        <input type="text">
+                    </div>
+                    
+                    <div class="career_input">
+                    	Area of Expertise  
+                        <input type="text">
+                    </div>
+                    
+                    <div class="career_input">
+                    	<div>Upload CV <span>(word or PDF format only)</span>  </div>
+                        
+                        <div id="FileUpload">
+                            <input size="24" id="BrowserHidden" onchange="document.getElementById('FileField').value = document.getElementById('BrowserHidden').value;" type="file"/>
+                            <div id="BrowserVisible"><input id="FileField" type="text" value="no file selected  "/></div>
+                        </div>
+                    </div>
+                </aside>
+                
+                <aside>
+                	<div class="career_input">
+                    	Last Name
+                        <input type="text">
+                    </div>
+                    
+                    <div class="career_input">
+                    	Contact Number
+                        <input type="text">
+                    </div>
+                    
+                    <div class="career_input">
+                    	Job Title  
+                        <input type="text">
+                    </div>
+                    
+                    <div class="career_input career_btns">
+                    	<a href="#" class="submit">Submit</a>
+                    	<a href="#" class="reset">Reset</a>
+                    </div>
+                </aside>
+            </article>
+            
+            <img src="images/tortules/career.png">
+        </div>
+    </article>
+</section>
