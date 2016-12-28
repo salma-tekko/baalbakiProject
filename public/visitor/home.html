@@ -11,17 +11,18 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
+<link rel="stylesheet" href="includes/aos.css" />
+
 <script src="includes/jquery-1.9.1.js" type="text/javascript"></script>
 <script src="includes/jquery-migrate-1.1.1.js" type="text/javascript"></script>
 <script src="includes/easing.js" type="text/javascript"></script>
 <script src="includes/jquery.cycle2.js" type="text/javascript"></script>
 <script src="includes/jquery.hoverIntent.js" type="text/javascript"></script>
 
-
+<script src="includes/aos.js"></script>
 <script src="includes/random.js" type="text/javascript"></script>
 
 <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
- 
 
 </head>
 
@@ -128,6 +129,10 @@ $('.galley_photos_btn').css('marginTop',galleryBtnHeight);
 galleryBtnHeight = $(window).height()* 0.25 * (-1);
 $('.gallery_videos_btn').css('marginTop',galleryBtnHeight);
 
+if($(window).height() > 800){
+    $('.newsroom_sec article').css('marginTop','-270px');
+}
+
 
 // $('.homeNewsSec').append($('.homeNews').html());
  
@@ -145,6 +150,7 @@ $('.gallery_videos_btn').css('marginTop',galleryBtnHeight);
 
 
 </script>
+
 <section class="engages_sec" id="about_us">
     <article>
         <div class="engages_content">
@@ -164,11 +170,13 @@ $('.gallery_videos_btn').css('marginTop',galleryBtnHeight);
 <section class="industrie_sec" id="served_industries">
     <article class="industrie_bnts">
         <ul class="clearfix btns_sec">
-            <li class="industrie_btn">
+            <li class="industrie_btn" data-aos="slide-right" data-aos-once="true">
+            	
             	<a href="#/industries">
                 	<img src="images/industrie/industrie_btn.png">
                     <img src="images/industrie/industrie_btn_hover.png">
                 </a>
+                
             </li>
             <li class="trade_btn">
             	<a href="#/trade">
@@ -176,7 +184,7 @@ $('.gallery_videos_btn').css('marginTop',galleryBtnHeight);
                     <img src="images/industrie/trade_btn_hover.png">
                 </a>
             </li>
-            <li class="real_estate_btn">
+            <li class="real_estate_btn" data-aos="slide-left" data-aos-once="true">
             	<a href="#/real_estate_agriculture">
             		<img src="images/industrie/real_estate_btn.png">
                     <img src="images/industrie/real_estate_hover.png">    
@@ -186,9 +194,9 @@ $('.gallery_videos_btn').css('marginTop',galleryBtnHeight);
     </article>
     <article class="industrie_icons">
         <ul class="clearfix">
-            <li class="industrie"><a href="#/industries"></a></li>
+            <li class="industrie" data-aos="slide-right"  data-aos-once="true"><a href="#/industries"></a></li>
             <li class="trade"><a href="#/trade"></a></li>
-            <li class="real_estate"><a href="#/real_estate_agriculture"></a></li>
+            <li class="real_estate"  data-aos="slide-left"  data-aos-once="true"><a href="#/real_estate_agriculture"></a></li>
         </ul>
     </article>
 </section>
@@ -204,6 +212,8 @@ $('.gallery_videos_btn').css('marginTop',galleryBtnHeight);
             </div>
         
          <!-- <div class="news_pager"></div> -->
+
+         <div class="moreNews"><a href="#/newsroom">more</a></div>
 
         </article>
 
@@ -226,8 +236,8 @@ $('.gallery_videos_btn').css('marginTop',galleryBtnHeight);
 </section>
 
 <section class="gallery_sec" id="gallery">
-    <a href="photos.html" class="galley_photos_btn"></a>
-    <a href="videos.html" class="gallery_videos_btn"></a>
+    <a href="#/photos" class="galley_photos_btn"></a>
+    <a href="#/videos" class="gallery_videos_btn"></a>
     <img src="images/baners/photographer.png" class="gallery_photographer">
 </section>
 

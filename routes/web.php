@@ -62,3 +62,4 @@ Route::post('cms/login','adminController@login');
 Route::get('visitor/news','visitorController@getNews');
 Route::get('visitor/videos','visitorController@getVideos');
 Route::post('visitor/email','visitorController@sendEmail');
+Route::get('visitor/getNewsById','visitorController@getNewsById');

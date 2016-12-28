@@ -250,6 +250,7 @@ img {
 	width:100%;
 	position:relative;
 	opacity:0.1;
+	overflow:hidden;
 }
 
 .industrie_bnts{
@@ -430,6 +431,7 @@ ul.btns_sec li a img:nth-child(2){
 	left:50%;
 	margin-left:-358px;
 	margin-top:-200px;
+	height: 225px;
 }
 
 .news_pager{
@@ -1908,6 +1910,7 @@ ul.more_pics ul li img{
     width: 100%;
     z-index: 10000;
     top:0;
+	left:0;
 }
 
 .more_link{
@@ -1970,4 +1973,36 @@ img.values_btn{
 	height: 100%;
 	z-index: 9999;
 	background: url('../images/loader.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+
+.glance_content {
+    top: 35px;
+}
+
+.what_we_do_content {
+    top: -40px;
+}
+
+.values_content {
+    top: -45px;
+}
+
+.moreNews a{
+	color: #037299;
+    font-family: "EurostileLTStd";
+    font-size: 20px;
+	text-decoration:underline;
+}
+
+.moreNews{
+	position:absolute;
+	right:20px;
+}
+
+.cycle-slide{
+	width:100%;
+}
+
+.video_sec{
+	height: 565px;
 }

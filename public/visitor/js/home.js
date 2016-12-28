@@ -4,71 +4,85 @@ visitor=angular.module('visitor');
 visitor.controller('homeController',function($scope,$http){
 
 
-		
 
 
 
 
 
-			getNews(1).then(function(data){
 
-				console.log('get news');
+	getNews(1).then(function(data){
+
+		console.log('get news');
 
 					// news1="<div> dasdasdsadassad </div><div> dasdasdsadassad </div>";
 					// $("#newsroom").append(news1);
 					//$('.cycle-slideshow').cycle(); 
 					//alert(news1);
 					$(".regular").slick({
-				        dots: true,
-				        arrows: false,
-				        infinite: false,
-				        slidesToShow: 1,
-				        slidesToScroll: 1
-				      });
+						dots: true,
+						arrows: false,
+						infinite: false,
+						slidesToShow: 1,
+						slidesToScroll: 1
+					});
 
 					
 
 					news=data.data;
 					console.log(news);
 
+
 					news.forEach(function(item , index) {
 						if (index < 3) {
 							console.log(item.news);
-							$(".regular").slick('slickAdd','<div><h1 class="sec_main_title2"><a href="#/eachNews/{{item.news}}">'+item.news.title+'</a></h1>'+item.news.content+'</div>');
+							console.log(item);
+							/*currentNews=JSON.stringify(item.news);
+							//var news = JSON.stringify(item.news);
+							url = Object.keys(item.news).map(function(k) {
+								return encodeURIComponent(k) + '=' + encodeURIComponent(item.news[k])
+							}).join('&');*/
+							//var recursiveEncoded = $.param( item );
+							//var recursiveDecoded = decodeURIComponent( $.param( myObject ) );recursiveEncoded
+						//	console.log(recursiveEncoded);
+							$(".regular").slick('slickAdd','<div><h1 class="sec_main_title2"><a href="#/eachNews/'+item.news.id+'">'+item.news.title+'</a></h1>'+item.news.content+'</div>');
 						}
 					})
 
 
-					for(i=0;i<3;i++)
+				/*	for(i=0;i<3;i++)
 					{
-							
-					}
+						currentNew=news[i];
+						console.log(currentNew);
 
-				
+						$(".regular").slick('slickAdd','<div><h1 class="sec_main_title2"><a href="#/eachNews/'+currentNew+'">'+currentNew.news.title+'</a></h1>'+currentNew.news.content+'</div>');
 
-			
-
-				console.log(data);
-			})
+					}*/
 
 
-			function getNews(type)
-			{
-				return new Promise(function(resolve){
-					$http({
-					method:'GET',
-					url:'news',
-					params :{
-						type:type
-					}
-				}).then(function(data){
-					resolve(data)
+
+
+
+					console.log(data);
+				})
+
+
+	function getNews(type)
+	{
+		return new Promise(function(resolve){
+			$http({
+				method:'GET',
+				url:'news',
+				params :{
+					type:type
+				}
+			}).then(function(data){
+				resolve(data)
 				/*	$('.cycle-slideshow').cycle();*/
-				})
-				})
-				
-			}
-    
+			})
+		})
+
+	}
+
 	$scope.getNews=function(type)
 	{
 
@@ -84,9 +98,9 @@ visitor.controller('homeController',function($scope,$http){
 
 /*			setTimeout(function(){ 
      	 appendNews(data);
-    }, 1500);*/
+     	}, 1500);*/
 
-			
+
 
 			//create div element
 			//append h1
@@ -134,10 +148,10 @@ visitor.controller('homeController',function($scope,$http){
 
 	function appendNews(){
 
-				
+
 		console.log('das');
 
 	}
-		
+
 
 });

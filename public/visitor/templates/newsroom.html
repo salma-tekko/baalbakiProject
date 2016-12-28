@@ -20,7 +20,7 @@
         <div class="news_pics">
         	<section class="clearfix">
             	<aside>
-                <a href="#/eachNews/{{mainNew[0]}}">
+                <a href="#/eachNews/{{mainNew[0].news.id}}">
 
                 <img src="coverPic/{{mainNew[0].news.coverPhoto}}" >
                 </a>
@@ -32,7 +32,7 @@
                 <ul class="clearfix">
                 	<li ng-repeat="new in set1" >
 
-                    <a href="#/eachNews/{{new}}">
+                    <a href="#/eachNews/{{new.news.id}}">
                     <img src="coverPic/{{new.news.coverPhoto}}" role="button" ng-click="selectNews(new);" >
                     </a>
                          
@@ -43,7 +43,7 @@
             
             <ul class="more_pics clearfix">
                 <li ng-repeat="new in setRest" >
-               <a href="#/eachNews/{{new}}">
+               <a href="#/eachNews/{{new.news.id}}">
                     <img src="coverPic/{{new.news.coverPhoto}}" role="button" ng-click="selectNews(new);" >
                     </a>
             </ul>
